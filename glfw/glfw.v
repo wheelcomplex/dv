@@ -85,7 +85,9 @@ const (
 	KEY_LEFT_SUPER = 343
 )
 
+// TODO more consts listed in https://github.com/go-gl/glfw/blob/master/v3.1/glfw/input.go
 const (
+	KeySpace = 32
 	KeyUp    = 265
 	KeyLeft  = 263
 	KeyRight = 262

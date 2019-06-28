@@ -323,6 +323,7 @@ fn key_down(wnd voidptr, key, code, action, mods int) {
 	mut game := &Game(glfw.get_window_user_pointer(wnd))
 	switch key {
 	case glfw.KeyUp:
+	case glfw.KeySpace:
 		// Rotate the tetro
 		game.rotation_idx++
 		if game.rotation_idx == TetroSize {
