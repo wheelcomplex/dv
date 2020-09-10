@@ -1,15 +1,41 @@
-Please title your PR as follows: `time: fix foo bar`. Always start with the thing you are fixing, then describe the fix.
+
+
+<!--
+
+Please title your PR as follows: `time: fix foo bar`.
+Always start with the thing you are fixing, then describe the fix.
 Don't use past tense (e.g. "fixed foo bar").
 
 Explain what your PR does and why.
 
-Before submitting a PR, please run the tests with `make test`, and make sure V can still compile itself. Run this twice:
+If you are adding a new function, please document it and add tests:
 
-./v -o v
-./v -o v
+```
+// foo does foo and bar
+fn foo() {
+
+// file_test.v
+fn test_foo() {
+    assert foo() == ...
+    ...
+}
+```
+
+If you are fixing a bug, please add a test that covers it.
+
+Before submitting a PR, please:
+  A) run the tests with `v test-compiler` .
+  B) make sure, that V can still compile itself:
+```shell
+./v -o v cmd/v
+./v -o v cmd/v
+```
+See also `TESTS.md`.
 
 I try to process PRs as soon as possible. They should be handled within 24 hours.
 
 Applying labels to PRs is not needed.
 
 Thanks a lot for your contribution!
+
+-->
